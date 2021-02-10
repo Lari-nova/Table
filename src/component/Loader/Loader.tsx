@@ -11,6 +11,8 @@ const DualRing = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
+  bottom: 50%;
+  right: 50%;
 	&:after {
     content: " ";
     display: block;

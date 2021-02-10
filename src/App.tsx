@@ -210,13 +210,12 @@ class App extends React.Component<Object, State> {
       )
     }
     return (
-      <div className="container position-absolute justify-content-center">
+      <div>
         {
           this.state.isLoading ? <Loader/> :
             <>
-              <TableSearch onSearch={this.searchHandler}/>
+              <TableSearch onSearch={this.searchHandler} onAddClick={this.onClick}/>
               {this.renderModalForm()}
-              <button onClick={this.onClick}>Добавить</button>
               <Table
               onSort={this.onSort}
               data={displayData}
@@ -232,6 +231,7 @@ class App extends React.Component<Object, State> {
     )
   }
 }
+
 
 const ButtonContainer = styled.div`
   position: absolute;
